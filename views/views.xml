@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="method_upload_xml.list">
+      <field name="name">method_upload_xml list</field>
+      <field name="model">method_upload_xml.method_upload_xml</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="method_upload_xml.action_window">
+      <field name="name">method_upload_xml window</field>
+      <field name="res_model">method_upload_xml.method_upload_xml</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="method_upload_xml.action_server">
+      <field name="name">method_upload_xml server</field>
+      <field name="model_id" ref="model_method_upload_xml_method_upload_xml"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="method_upload_xml" id="method_upload_xml.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="method_upload_xml.menu_1" parent="method_upload_xml.menu_root"/>
+    <menuitem name="Menu 2" id="method_upload_xml.menu_2" parent="method_upload_xml.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="method_upload_xml.menu_1_list" parent="method_upload_xml.menu_1"
+              action="method_upload_xml.action_window"/>
+    <menuitem name="Server to list" id="method_upload_xml" parent="method_upload_xml.menu_2"
+              action="method_upload_xml.action_server"/>
+    -->
+  </data>
+</odoo>

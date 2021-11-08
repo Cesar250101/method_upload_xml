@@ -31,8 +31,13 @@ class UploadXMLWizard(models.TransientModel):
             )
         elif not product_id:
             return False
-        price_subtotal = float(line.find("MontoItem").text)    
-        qtyItem=float(line.find("QtyItem").text)    
+        price_subtotal = float(line.find("MontoItem").text)
+        try:
+            qtyItem=float(line.find("QtyItem").text)    
+        except Exception as ex:
+            _logger.error(tools.ustr(ex))
+            qtyItem=1
+
         price = float(line.find("PrcItem").text) if line.find("PrcItem") is not None else price_subtotal
         subTotal=qtyItem*price
         if line.find("DescuentoPct") is not None:
